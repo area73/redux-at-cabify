@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Counter from "./components/Counter";
 import Footer from "./components/Footer";
+import Summary from "./components/Summary";
 
 class App extends Component {
   constructor() {
@@ -19,6 +20,7 @@ class App extends Component {
     return (
       <div className="App">
         <Counter increase={this.increase} counter={this.state.counter} />
+        <Summary increase={this.increase} counter={this.state.counter} />
         <Footer counter={this.state.counter} />
       </div>
     );
