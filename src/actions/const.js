@@ -1,3 +1,4 @@
 export default {
-  INCREASE: "INCREASE"
+  INCREASE: "INCREASE",
+  SET_USER_NAME: "SET_USER_NAME"
 };
