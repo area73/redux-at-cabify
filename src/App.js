@@ -4,6 +4,7 @@ import "./App.css";
 import Counter from "./components/Counter";
 import Footer from "./components/Footer";
 import Summary from "./components/Summary";
+import OtherThing from "./components/OtherThing";
 
 class App extends Component {
   constructor() {
@@ -23,6 +24,7 @@ class App extends Component {
         <Counter />
         <Summary />
         <Footer />
+        <OtherThing />
       </div>
     );
   }
