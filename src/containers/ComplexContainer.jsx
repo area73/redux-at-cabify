@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { bindActionCreators } from "redux";
 import setUserName from "../actions/setUserName";
+import getCounter from "../selectors/getCounter";
+import getUltraComplexSelector from "../selectors/getUltraComplexSelector";
 
 class ComplexContainer extends Component {
   handleChange = (e) => {
@@ -28,8 +30,8 @@ class ComplexContainer extends Component {
 
 const mapStateToProps = (state) => {
   return {
-    userName: state.userName,
-    counter: state.counter
+    userName: getUltraComplexSelector(state),
+    counter: getCounter(state)
   };
 };
 
