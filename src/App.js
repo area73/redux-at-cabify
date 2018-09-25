@@ -1,9 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import Footer from "./components/Footer";
-import Summary from "./components/Summary";
-import Pinger from "./containers/Pinger";
-import ComplexContainer from "./containers/ComplexContainer";
+import PokemonList from "./containers/PokemonList";
 
 class App extends Component {
   constructor() {
@@ -20,10 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Pinger />
-        <Summary />
-        <ComplexContainer />
-        <Footer />
+        <PokemonList />
       </div>
     );
   }
