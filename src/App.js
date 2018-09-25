@@ -1,9 +1,8 @@
 import React, { Component } from "react";
-
 import "./App.css";
-import Counter from "./components/Counter";
 import Footer from "./components/Footer";
 import Summary from "./components/Summary";
+import Pinger from "./containers/Pinger";
 import ComplexContainer from "./containers/ComplexContainer";
 
 class App extends Component {
@@ -21,7 +20,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Counter />
+        <Pinger />
         <Summary />
         <ComplexContainer />
         <Footer />
