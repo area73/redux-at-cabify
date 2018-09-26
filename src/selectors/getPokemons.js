@@ -1,1 +1,1 @@
-export default (state) => state.pokemons;
+export default (state) => Object.values(state.pokemons || {});

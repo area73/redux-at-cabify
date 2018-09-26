@@ -3,7 +3,8 @@ import { mergeMap, map } from "rxjs/operators";
 import { ajax } from "rxjs/ajax";
 import ActionTypes from "../actions/const";
 import fetchPokemonsFulfilled from "../actions/fetchPokemonsFulfilled";
-import fetchPokemonFulfilled from "../actions/fetchPokemonFulfilled";
+import { normalize } from "normalizr";
+import { pokemon } from "../schemas/index";
 
 export default (action$) =>
   action$.pipe(
@@ -18,9 +19,15 @@ export default (action$) =>
       });
     }),
     map((requestResponse) => {
+      let normalizedResponse;
       if (requestResponse.response.results) {
-        return fetchPokemonsFulfilled(requestResponse.response.results);
+        normalizedResponse = normalize(requestResponse.response, {
+          results: [pokemon]
+        });
+      } else {
+        normalizedResponse = normalize(requestResponse.response, pokemon);
       }
-      return fetchPokemonFulfilled(requestResponse.response);
+
+      return fetchPokemonsFulfilled(normalizedResponse);
     })
   );
