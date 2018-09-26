@@ -3,6 +3,7 @@ import { bindActionCreators } from "redux";
 import fetchPokemons from "../actions/fetchPokemons";
 import { connect } from "react-redux";
 import getPokemons from "../selectors/getPokemons";
+import PokemonListItem from "../components/PokemonListItem";
 
 class PokemonList extends Component {
   componentDidMount() {
@@ -11,7 +12,7 @@ class PokemonList extends Component {
 
   renderPokemons() {
     return this.props.pokemons.map((pokemon) => (
-      <li key={pokemon.url}> {pokemon.name} </li>
+      <PokemonListItem pokemon={pokemon} key={pokemon.name} />
     ));
   }
 
