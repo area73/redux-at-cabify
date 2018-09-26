@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Pokemon from "../containers/Pokemon";
 
 export default class PokemonListItem extends Component {
   constructor() {
@@ -12,14 +13,14 @@ export default class PokemonListItem extends Component {
   };
 
   renderDetail() {
-    return <p>Pokemon detail here</p>;
+    return <Pokemon pokemonName={this.props.pokemonName} />;
   }
 
   render() {
-    const { pokemon } = this.props;
+    const { pokemonName } = this.props;
     return (
-      <li key={pokemon.url} onClick={this.handleClick}>
-        {pokemon.name}
+      <li key={pokemonName} onClick={this.handleClick}>
+        {pokemonName}
         {!!this.state.open && this.renderDetail()}
       </li>
     );

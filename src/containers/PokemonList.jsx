@@ -12,7 +12,7 @@ class PokemonList extends Component {
 
   renderPokemons() {
     return this.props.pokemons.map((pokemon) => (
-      <PokemonListItem pokemon={pokemon} key={pokemon.name} />
+      <PokemonListItem pokemonName={pokemon.name} key={pokemon.name} />
     ));
   }
 
