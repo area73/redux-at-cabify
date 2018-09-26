@@ -2,6 +2,10 @@
 # yarn lockfile v1
 
 
+"@cabify-dev/remote-requests@1.0.6":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@cabify-dev/remote-requests/-/remote-requests-1.0.6.tgz#6e58d048e6e61407666a4403ec3a01cbff73a94d"
+
 abab@^1.0.3:
   version "1.0.4"
   resolved "https://registry.yarnpkg.com/abab/-/abab-1.0.4.tgz#5faad9c2c07f60dd76770f71cf025b62a63cfd4e"
