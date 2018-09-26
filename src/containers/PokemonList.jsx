@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import fetchPokemons from "../actions/fetchPokemons";
 import { connect } from "react-redux";
+import getPokemons from "../selectors/getPokemons";
 
 class PokemonList extends Component {
   componentDidMount() {
@@ -9,8 +10,8 @@ class PokemonList extends Component {
   }
 
   renderPokemons() {
-    this.props.pokemons.map((pokemon) => (
-      <li key={pokemon.id}> {pokemon.name} </li>
+    return this.props.pokemons.map((pokemon) => (
+      <li key={pokemon.url}> {pokemon.name} </li>
     ));
   }
 
@@ -24,7 +25,9 @@ class PokemonList extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = (state) => ({
+  pokemons: getPokemons(state)
+});
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({ fetchPokemons }, dispatch)
