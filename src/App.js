@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import "./App.css";
-import PokemonList from "./containers/PokemonList";
+import Repositories from "./containers/Repositories";
 
 class App extends Component {
   constructor() {
@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <PokemonList />
+        <Repositories />
       </div>
     );
   }

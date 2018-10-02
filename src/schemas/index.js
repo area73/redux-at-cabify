@@ -5,3 +5,5 @@ export const pokemon = new schema.Entity(
   {},
   { idAttribute: (item) => item.name }
 );
+
+export const repository = new schema.Entity("repositories");
