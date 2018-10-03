@@ -12,3 +12,13 @@ export default combineReducers({
   pokemons,
   repositories
 });
+
+// What combineReducers does under the hood
+// (reducers) =>
+//   Object.keys(reducers).reduce(
+//     (acc, reducerName) => ({
+//       ...acc,
+//       [reducerName]: reducers[reducerName](INIT_ACTION)
+//     }),
+//     {}
+//   );
