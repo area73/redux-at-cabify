@@ -5,11 +5,9 @@ import { repository } from "../schemas/index";
 export default () => ({
   type: ActionTypes.FETCH_REPOSITORIES,
   payload: {
-    url: "",
+    url: "https://api.github.com/orgs/facebook/repos",
     method: HttpMethod.GET,
     body: {}
   },
-  normalizeResponseWith: {
-    results: [repository]
-  }
+  normalizeResponseWith: [repository]
 });

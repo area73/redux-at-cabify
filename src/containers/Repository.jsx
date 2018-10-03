@@ -7,21 +7,29 @@ import getRepository from "../selectors/getRepository";
 class Repository extends Component {
   componentDidMount() {
     const {
-      id,
+      repository,
       actions: { fetchRepository }
     } = this.props;
 
-    fetchRepository(id);
+    fetchRepository(repository.name);
   }
 
   render() {
     const { repository } = this.props;
-    return <div> {repository.name} </div>;
+    if (repository && repository.subscribers_count) {
+      return (
+        <div>
+          <p> Subscribers: {repository.subscribers_count} </p>
+        </div>
+      );
+    } else {
+      return <div> Loading </div>;
+    }
   }
 }
 
-const mapStateToProps = (state, { id }) => ({
-  repository: getRepository(state, { id })
+const mapStateToProps = (state, { repositoryId }) => ({
+  repository: getRepository(state, { id: repositoryId })
 });
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators({ fetchRepository }, dispatch)

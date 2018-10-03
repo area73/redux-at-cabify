@@ -13,14 +13,14 @@ export default class RepositoryListItem extends Component {
   };
 
   renderDetail() {
-    return <Repository repositoryName={this.props.repositoryName} />;
+    return <Repository repositoryId={this.props.repository.id} />;
   }
 
   render() {
-    const { repositoryName } = this.props;
+    const { repository } = this.props;
     return (
-      <li key={repositoryName} onClick={this.handleClick}>
-        {repositoryName}
+      <li key={repository.name} onClick={this.handleClick}>
+        {repository.name}
         {!!this.state.open && this.renderDetail()}
       </li>
     );

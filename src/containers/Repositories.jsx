@@ -12,10 +12,7 @@ class RepositoryList extends Component {
 
   renderRepositories() {
     return this.props.repositories.map((repository) => (
-      <RepositoryListItem
-        repositoryName={repository.name}
-        key={repository.name}
-      />
+      <RepositoryListItem repository={repository} key={repository.name} />
     ));
   }
 
