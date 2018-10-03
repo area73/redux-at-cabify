@@ -1,4 +1,4 @@
-import ActionTypes from "../actions/const";
+import ActionTypes from "../../actions/const";
 
 export default (state = null, action) => {
   const { type } = action;

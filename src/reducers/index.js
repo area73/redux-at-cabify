@@ -3,7 +3,7 @@ import { combineReducers } from "redux";
 import userName from "./userName";
 import ping from "./ping";
 import pokemons from "./pokemons";
-import repositories from "./repositories";
+import repositories from "./repositories/index";
 
 export default combineReducers({
   myCounter: counter,

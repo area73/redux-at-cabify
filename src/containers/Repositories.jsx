@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import fetchRepositories from "../actions/fetchRepositories";
 import { connect } from "react-redux";
-import getRepositories from "../selectors/getRepositories";
+import getOrderedRepositories from "../selectors/getOrderedRepositories";
 import RepositoryListItem from "../components/RepositoryListItem";
 
 class RepositoryList extends Component {
@@ -27,7 +27,7 @@ class RepositoryList extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  repositories: getRepositories(state)
+  repositories: getOrderedRepositories(state)
 });
 
 const mapDispatchToProps = (dispatch) => ({

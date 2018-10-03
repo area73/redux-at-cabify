@@ -1,1 +1,1 @@
-export default (state) => Object.values(state.repositories || {});
+export default (state) => state.repositories.entities;
