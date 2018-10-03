@@ -2,10 +2,20 @@
 # yarn lockfile v1
 
 
+"@cabify-dev/remote-entities@0.3.0-alpha.37a56b9b":
+  version "0.3.0-alpha.37a56b9b"
+  resolved "https://registry.yarnpkg.com/@cabify-dev/remote-entities/-/remote-entities-0.3.0-alpha.37a56b9b.tgz#2c6feca183536eaee6ab8eb355f0ca0ccb1021a1"
+  integrity sha512-+elK8SuJ1gkVZ9wEwQqbBwCULjlhi79wk0vX3uI7nEdMIrXgPDj6St/hWHzVA8sQ96PH/+2GgH/lw7E5Hcp+Kw==
+
 "@cabify-dev/remote-requests@1.1.1":
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@cabify-dev/remote-requests/-/remote-requests-1.1.1.tgz#5a5013464253020dee129db76aa181d25e7058db"
   integrity sha512-V79p/i+tRbG3nBmTHTQXgbvi/3pQR8aeQOXMpFFYwlbZe56dLlhBrQn0veraz6BhAblNR2C5zN35ywmEmn7WHw==
+
+"@cabify-dev/utils-drawer@0.3.4":
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/@cabify-dev/utils-drawer/-/utils-drawer-0.3.4.tgz#9a6cc23a0a7cebbba7aed4981801ba9f9fe610c9"
+  integrity sha512-QLwgFmBlLQkVM35LxP2Hu0OO3yqR/chzlUxaC+dKMLTrJ31H/VVIBTk5WXXzkrrwd0/q/+cQDUsUQ38XIffHZg==
 
 abab@^1.0.3:
   version "1.0.4"
@@ -1465,6 +1475,13 @@ camel-case@3.0.x:
   dependencies:
     no-case "^2.2.0"
     upper-case "^1.1.1"
+
+camelcase-keys-recursive@^0.8.2:
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/camelcase-keys-recursive/-/camelcase-keys-recursive-0.8.2.tgz#06df121fbff46cd890350072cdff5657396f7d3a"
+  integrity sha1-Bt8SH7/0bNiQNQByzf9WVzlvfTo=
+  dependencies:
+    map-obj "^1.0.0"
 
 camelcase-keys@^2.0.0:
   version "2.1.0"
@@ -3266,6 +3283,11 @@ functional-red-black-tree@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/functional-red-black-tree/-/functional-red-black-tree-1.0.1.tgz#1b0ab3bd553b2a0d6399d29c0e3ea0b252078327"
   integrity sha1-GwqzvVU7Kg1jmdKcDj6gslIHgyc=
+
+fuse.js@^3.0.4:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/fuse.js/-/fuse.js-3.2.1.tgz#6320cb94ce56ec9755c89ade775bcdbb0358d425"
+  integrity sha1-YyDLlM5W7JdVyJred1vNuwNY1CU=
 
 gauge@~2.7.3:
   version "2.7.4"
@@ -5158,6 +5180,11 @@ mkdirp@0.5.1, mkdirp@0.5.x, mkdirp@^0.5.0, mkdirp@^0.5.1, mkdirp@~0.5.0, mkdirp@
   dependencies:
     minimist "0.0.8"
 
+moment@^2.18.1:
+  version "2.22.2"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.2.tgz#3c257f9839fc0e93ff53149632239eb90783ff66"
+  integrity sha1-PCV/mDn8DpP/UxSWMiOeuQeD/2Y=
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -6555,6 +6582,11 @@ reduce-function-call@^1.0.1:
   integrity sha1-WiAL+S4ON3UXUv5FsKszD9S2vpk=
   dependencies:
     balanced-match "^0.4.2"
+
+reduce-reducers@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/reduce-reducers/-/reduce-reducers-0.3.0.tgz#ed6122072676eb8d84d41d74bba31e5e3f7ce977"
+  integrity sha512-YW9X5tOomPNBuu7S25phTuNfvEFmJOBUkeZIJpPzTD7Q1iyAUyYj8mGAD/C8h8uljMXdZMZvq6jL6LZ//gjuwg==
 
 redux-observable@^0.18.0:
   version "0.18.0"

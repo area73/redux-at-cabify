@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import { bindActionCreators } from "redux";
-import fetchRepositories from "../actions/fetchRepositories";
 import { connect } from "react-redux";
-import getOrderedRepositories from "../selectors/getOrderedRepositories";
 import RepositoryListItem from "../components/RepositoryListItem";
-import fetchRepositoriesNextPage from "../actions/fetchRepositoriesNextPage";
+import { repositories } from "../remoteEntities";
 
 class RepositoryList extends Component {
   componentDidMount() {
@@ -22,12 +20,14 @@ class RepositoryList extends Component {
   };
 
   render() {
-    const { repositories } = this.props;
+    const { repositories, queryStatus } = this.props;
     if (repositories && repositories.length > 0) {
       return (
         <div>
           <ul> {this.renderRepositories()} </ul>
-          <button onClick={this.handleNextPageClick}> Fetch next page </button>
+          <button onClick={this.handleNextPageClick}>
+            {queryStatus ? "Loading" : "Fetch next page"}
+          </button>
         </div>
       );
     } else {
@@ -36,13 +36,20 @@ class RepositoryList extends Component {
   }
 }
 
-const mapStateToProps = (state) => ({
-  repositories: getOrderedRepositories(state)
-});
+const mapStateToProps = (state) => {
+  console.log(repositories.selectors.getOrderedEntities(state));
+  return {
+    repositories: repositories.selectors.getOrderedEntities(state),
+    queryStatus: repositories.selectors.getRequest(state)
+  };
+};
 
 const mapDispatchToProps = (dispatch) => ({
   actions: bindActionCreators(
-    { fetchRepositories, fetchRepositoriesNextPage },
+    {
+      fetchRepositories: repositories.actions.runQuery,
+      fetchRepositoriesNextPage: repositories.actions.fetchNextPage
+    },
     dispatch
   )
 });
