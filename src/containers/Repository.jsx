@@ -1,17 +1,10 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { repositories } from "../remoteEntities";
+// import { bindActionCreators } from "redux";
+// import { repositories } from "../remoteEntities";
 
 class Repository extends Component {
-  componentDidMount() {
-    const {
-      repository,
-      actions: { fetchRepository }
-    } = this.props;
-
-    fetchRepository(repository.name);
-  }
+  componentDidMount() {}
 
   render() {
     const { repository } = this.props;
@@ -27,14 +20,6 @@ class Repository extends Component {
   }
 }
 
-const mapStateToProps = (state, { repositoryId }) => ({
-  repository: getRepository(state, { id: repositoryId })
-});
-const mapDispatchToProps = (dispatch) => ({
-  actions: bindActionCreators({ repositories.actions.fetchEntity }, dispatch)
-});
+const mapStateToProps = (state, { repositoryId }) => ({});
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Repository);
+export default connect(mapStateToProps)(Repository);
